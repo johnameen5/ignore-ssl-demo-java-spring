@@ -19,7 +19,7 @@ public class MainController {
     @RequestMapping("/login")
     String login() throws NoSuchAlgorithmException, KeyStoreException, KeyManagementException {
         String url = "https://158.101.229.194/PatientPortalService/api/account/Login";
-        LoginRequest loginRequest = new LoginRequest("khatib.marwan@outlook.com", "M1qwerty-", true, "Windows 11 Pro", "11.1.0.1", "Concepts Patient Portal", "1.0.0.0-preview 8", "mypage");
+        LoginRequest loginRequest = new LoginRequest("test.test@outlook.com", "******", true, "Windows 11 Pro", "11.1.0.1", "Concepts Patient Portal", "1.0.0.0-preview 8", "mypage");
         try{
             LoginResponse loginResponse = restTemplate.postForObject(url,loginRequest, LoginResponse.class);
             System.out.println(loginResponse.getToken().getBearer());
