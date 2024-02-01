@@ -53,23 +53,4 @@ public class RestTemplateConfig {
         RestTemplate restTemplate = new RestTemplate(requestFactory);
         return restTemplate;
     }
-
-//    @Bean
-//    public RestTemplate restTemplate() throws KeyStoreException, NoSuchAlgorithmException, KeyManagementException {
-//        SSLContext sslcontext = SSLContexts.custom().loadTrustMaterial(null, (chain, authType) -> true).build();
-//        SSLConnectionSocketFactory sslsf = new SSLConnectionSocketFactory(sslcontext, new String[]{"TLSv1"}, null, new NoopHostnameVerifier());
-//        PoolingHttpClientConnectionManager connectionManager = PoolingHttpClientConnectionManagerBuilder
-//                .create()
-//                .setSSLSocketFactory(sslsf)
-//                .build();
-//
-//        CloseableHttpClient httpClient = HttpClients.custom().setConnectionManager(connectionManager).build();
-//        HttpComponentsClientHttpRequestFactory requestFactory =
-//                new HttpComponentsClientHttpRequestFactory();
-//        requestFactory.setHttpClient(httpClient);
-//
-//        RestTemplate restTemplate = new RestTemplate(requestFactory);
-//        return restTemplate;
-//    }
-
 }
